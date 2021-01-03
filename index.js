@@ -60,5 +60,25 @@ console.log(myBoolean);
 /**
  * Challenge 1
  */
-const myObject = {};
+//const myObject = {};
+//console.log(myObject);
+
+/**challenge 2
+ * declare "x"
+ */
+/**let x = 10;
+const y = true;
+const myObject = {
+    a: x,
+    b:y,
+}
 console.log(myObject);
+let anotherObject;
+x = 20;
+anotherObject = {
+    newA: x,
+    b : y,
+    c : myObject
+};
+console.log(anotherObject);
+*/
