@@ -94,7 +94,7 @@ console.log(str3);
  * Challenge 3
  * create outerFunction with 2 parameters
  */
-function outerFunction(a,b){
+/**function outerFunction(a,b){
     function innerFunction(c)
     {
         return c*c;
@@ -105,3 +105,70 @@ function outerFunction(a,b){
     console.log(result);
 }
 outerFunction(2,3);
+*/
+/**
+ * function declaration vs function expression
+ */
+/**function myFn(a,b){     // Function declaration
+    let c;
+    a++;
+    c = a+b;
+    return c;
+}
+
+expression = function(a,b){      //function expression being assigned to a variable
+    let c;
+    a++;
+    c = a+b;
+    return c;
+}
+console.log(expression(1,5));
+
+setTimeout(function(){
+    console.log("delayed message");
+},2000);
+// delayed message is logged to the console in 2000ms (2 sec)*/
+
+/**
+ * example 1
+ * try to declare function expression
+ */
+//function(){} //Uncaught SyntaxError: Function statements require a function name
+
+/**
+ * Example 2
+ * assign function expression to the variable
+ */
+/**const myFunstion = function(){};
+console.log(myFunstion());     //undefined
+console.log(myFunstion);    //ƒ (){}
+*/
+/**
+ * Example 3
+ * callback function
+ */
+/**setTimeout(function myFunction(){
+    console.log("delayed message")
+}, 1000);*/
+/**
+ * example 4
+ * callback function (example 2)
+ */
+/**let i = 1;
+setInterval(function()
+{
+    console.log("Message logged each 1 second "+i);
+    i++;
+},1000);*/
+
+/**
+ * challenge
+ */
+let i = 1;
+const myInterval = setInterval(function() {
+    console.log("Here is message number"+ i);
+    i++;
+}, 2000);
+setTimeout(function() {
+    clearInterval(myInterval);
+},10000);
