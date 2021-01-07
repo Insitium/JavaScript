@@ -187,9 +187,40 @@ console.log(a);   //6
  * Section 5
  * operators associativity
  */
-let a, b;
+/*let a, b;
 b = 3;
 a = b = 5;    //this has right to left associativity
 console.log(a,b);   //5 5
 console.log(4+ 5+ 6);   //15    left to right
 console.log(5 * 10 / 2 / 5);    // left to right // * and / bas same precedence
+*/
+
+/**
+ * challlenge
+ */
+/**let myVariable1 = 5, myVariable2 = "10";
+console.log(!!(+myVariable1<= +myVariable2));
+
+/**
+ * task 2
+ */
+/*let myNumber1 = 10;
+let myNumber2 = 3;
+console.log(10 % 3);
+*/
+
+/** 
+ * task 3
+ */
+//console.log(3 || true && null || false);    //""
+// && has more precedence so true && null = null
+// then from left to right 3 || null || false is left --> 3|| null = 3 -->3||false = 3
+/**
+ * task 4
+ */
+/**let a = 5;
+a+=1;
+a*=2;
+a-=5;
+a/=2; 
+*/
