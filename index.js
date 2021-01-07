@@ -131,7 +131,7 @@ console.log(city || defaultCity);   // Los Angeles      // because it chcked the
 */
 
 //&& operator
-console.log(true && false);
+/**console.log(true && false);
 console.log("abc" && 10 && false && "" && "abcd");  //false
 /* it will go like
 abd && 10 will give true
@@ -139,7 +139,7 @@ true and false will give false
 and since it has found false it will return the first false
 */
 //And returns the value of the first false operand
-console.log("abc" && 10 && NaN && "" && "abcd");  //NaN
+/**console.log("abc" && 10 && NaN && "" && "abcd");  //NaN
 console.log("abc" && 10 && "" && "abcd"); //""
 
 //All operands are true
@@ -166,3 +166,30 @@ myVariable = null;
 console.log(!!myVariable);      //false  
 myVariable = 10; 
 console.log(!!myVariable);    //true
+*/
+
+
+/**
+ * Section 4
+ * operators precedence
+ */
+/**console.log(2 + 4 * 10);    //42
+console.log((2+4) * 10);   //60
+
+
+let a;
+a = 1;
+
+a = a + 5;     //first we will call "+"" operator and then the assignment operator
+console.log(a);   //6
+*/
+/** 
+ * Section 5
+ * operators associativity
+ */
+let a, b;
+b = 3;
+a = b = 5;    //this has right to left associativity
+console.log(a,b);   //5 5
+console.log(4+ 5+ 6);   //15    left to right
+console.log(5 * 10 / 2 / 5);    // left to right // * and / bas same precedence
