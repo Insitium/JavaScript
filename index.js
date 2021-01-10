@@ -104,7 +104,7 @@ console.log(myArray);*/
 /**
  * exapmle 6
  */
-const myArray1 = [1, 2, 3];
+/*const myArray1 = [1, 2, 3];
 const myArray2 = [1, 2, 3];
 console.log(myArray1 === myArray2);     // false
 console.log(myArray1 == myArray2);     // fasle
@@ -116,4 +116,27 @@ console.log(copyOfMyarray1 === myArray1);       //true
 
 //Way to compare two arrays
 console.log(myArray1.toString() === myArray2.toString());       //will show the exact comparison
+*/
+/**
+ * Challenge 1
+ */
+/**const myArray = [true , null];
+myArray.unshift("Hello");
+myArray.unshift(100);
+console.log(myArray);*/
 
+/**
+ * Challenge 2
+ */
+/*const myArray = [1, 2];
+myArray[10] = "abc";
+console.log(myArray);
+console.log(myArray.length);*/
+
+/**
+ * challenge 3
+ */
+const myArray = [{name: "camry", brand:"toyota"}, {name:"wagonr", brand: "Suzuki"}, {car:"tata", brand:"nexon"}];
+console.log(myArray);
+myArray.push({name: "model3", brand: "tesla"});
+console.log(myArray);
