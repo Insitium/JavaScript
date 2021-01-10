@@ -17,7 +17,7 @@ myArray[5] = 55;        //new place would be created at 5th position and 4th pos
 console.log(myArray);
 */
 //Array methods
-const myArray = [1,2,3];
+/**const myArray = [1,2,3];
 console.log(myArray);
 
 myArray.push(4);
@@ -41,4 +41,33 @@ console.log(shiftRemovedElement);
 //unshift
 myArray.unshift(2);
 myArray.unshift(1);
+console.log(myArray);*/
+
+/**
+ * Example 1
+ */
+//const myArray = [];
+//console.log(myArray);
+
+/**
+ * Example 2
+ */
+/**const myArray = [];
+myArray[0] = "first element";
 console.log(myArray);
+
+myArray[1] = "Second element";
+console.log(myArray);
+
+myArray.push("third element");
+console.log(myArray);
+*/
+const myArray = [3, true, "abc",{}];
+console.log(myArray);
+myArray[1] = "newvalue for second element";
+console.log(myArray);
+
+myArray[3].newProp = 10;
+console.log(myArray);
+console.log(myArray[3].newProp);
+console.log(myArray[3]["newProp"]);
