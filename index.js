@@ -62,7 +62,7 @@ console.log(myArray);
 myArray.push("third element");
 console.log(myArray);
 */
-const myArray = [3, true, "abc",{}];
+/**const myArray = [3, true, "abc",{}];
 console.log(myArray);
 myArray[1] = "newvalue for second element";
 console.log(myArray);
@@ -70,4 +70,50 @@ console.log(myArray);
 myArray[3].newProp = 10;
 console.log(myArray);
 console.log(myArray[3].newProp);
-console.log(myArray[3]["newProp"]);
+console.log(myArray[3]["newProp"]);*/
+
+
+/**
+ * Example 4
+ */
+/**const myArray = [1,2];
+console.log(myArray[0]);
+//if the property name in the object is numeric then you cant use . notation
+//console.log(myArray.0);     //Uncaught SyntaxError: missing ) after argument list
+*/
+
+/**
+ * examplpe 5
+ * delete elements
+ */
+/**const myArray = [true, null, 1,2,"abc"];
+console.log(myArray);
+
+delete myArray[2];
+console.log(myArray);
+console.log(myArray[2]);
+
+myArray.pop();
+console.log(myArray);
+
+myArray.pop();
+console.log(myArray);
+
+myArray.shift();
+console.log(myArray);*/
+/**
+ * exapmle 6
+ */
+const myArray1 = [1, 2, 3];
+const myArray2 = [1, 2, 3];
+console.log(myArray1 === myArray2);     // false
+console.log(myArray1 == myArray2);     // fasle
+//because theya rwe the pointerso fthe object and every pointer is different;
+
+const copyOfMyarray1 = myArray1;
+console.log(copyOfMyarray1 === myArray1);       //true
+//because we have copied the same pointers and they are same since we have copied them
+
+//Way to compare two arrays
+console.log(myArray1.toString() === myArray2.toString());       //will show the exact comparison
+
