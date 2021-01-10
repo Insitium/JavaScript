@@ -30,8 +30,66 @@ while(i >-5){
 }*/
 
 // wehn we want one action to be performed atleast once then we use do while loop
-let i = 100;
+/*let i = 100;
 do{
     console.log(i);
     i++;
-}while(i<10);
+}while(i<10);*/
+
+/**
+ * Example 5
+ * for loops with objects
+ */
+/*const myObjects = {
+    a: "abc",
+    b:true,
+    c:null,
+    d:150
+};
+for(let key in myObjects){
+    console.log(key);
+    console.log(myObjects[key]);
+    console.log("---------");
+}*/
+
+/**
+ * Example 6
+ * for loops with objects with imherited objects
+ */
+/*const myObjects = {
+    a: "abc",
+    b:true,
+    c:null,
+    d:150
+};
+Object.prototype.globalProp = "Inherited property";     //adds a property to the object like we have proto
+for(let key in myObjects){
+    console.log(key, myObjects[key]);
+}*/
+
+/**
+ * Example 7
+ * for in loop with arrays
+ */
+/*const myArray = [true, {}, {} ,10];
+Array.prototype.globalProp = "Global array property";
+for(let key in myArray){
+    console.log(key , myArray[key])
+}*/
+
+/**
+ * Example 8 
+ * for of loop with arrays
+ */
+const persons = [{
+    name: "Mike",
+    age: 25
+},
+{
+    name:"bob",
+    age:30
+},{name:"Alice", age:27}
+]
+for(let person of persons){
+    console.log(person.name +  " is "+person.age + " years old");
+}
