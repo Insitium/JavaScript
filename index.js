@@ -111,7 +111,7 @@ for(let person of persons){
 /**
  * Example
  */
-let month = 2;
+/*let month = 2;
 switch (month){
     case 1:
         console.log("It is december");
@@ -124,4 +124,22 @@ switch (month){
         break;
     default:
         console.log("Not a winter month");
-}
+}*/
+
+/**
+ * Ternary operators
+ */
+//condition ? Expression1 : Expression2
+/**
+ * or
+condition
+    ? Expression1
+    : Expression2
+ */
+/*let value = 11;
+value
+? console.log("Value is true")
+: console.log("Value is false");
+*/
+let value = 11;
+console.log(value>0 ? value : -value);
