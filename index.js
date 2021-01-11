@@ -81,15 +81,47 @@ for(let key in myArray){
  * Example 8 
  * for of loop with arrays
  */
-const persons = [{
+/*const persons = [{
     name: "Mike",
     age: 25
 },
-{
+{chrome
     name:"bob",
     age:30
 },{name:"Alice", age:27}
 ]
 for(let person of persons){
     console.log(person.name +  " is "+person.age + " years old");
+}*/
+
+
+/**
+ * Switch statements
+ */
+/*switch(Expression){
+    case A:
+        // Action if expression == A
+        break;
+    case B:
+        //actions if Expression == B
+        break;
+    default:
+        //default actions
+}*/
+/**
+ * Example
+ */
+let month = 2;
+switch (month){
+    case 1:
+        console.log("It is december");
+        break;
+    case 2:
+        console.log("January");
+        break;
+    case 3:
+        console.log("february");
+        break;
+    default:
+        console.log("Not a winter month");
 }
