@@ -70,3 +70,29 @@ do{
 myNumbers.push(newRandomNumber);
 console.log(myNumbers);*/
 
+/**
+ * task 3
+ * for in loop. Make for in loop iterate only over own properties of myObject
+ */
+/*const myObject = {
+    name: "sarthak",
+    age : 23,
+    city: "delhi"
+};
+Object.prototype.country = "India";
+for(let key in myObject){
+    if(myObject.hasOwnProperty(key)){
+    console.log(myObject[key]);
+    }
+}*/
+
+/**
+ * Task 4
+ * rewrite if lese statement using ternary operator
+ */
+function emptyArray(inputArray){  
+    return inputArray.length>0  ? "Array is not empty" : "Array is empty";
+}
+
+console.log(emptyArray([1,3]));
+console.log(emptyArray([]));
