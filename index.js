@@ -141,5 +141,50 @@ value
 ? console.log("Value is true")
 : console.log("Value is false");
 */
-let value = 11;
-console.log(value>0 ? value : -value);
+/*let value = 11;
+console.log(value>0 ? value : -value);*/
+
+
+/**
+ * Switch statement example
+ */
+/*let color = "green";
+if(color === "green"){
+    console.log("It is green color");
+}else if (color === "Yellow"){
+    console.log("Yellow color");
+}else if( color === "red"){
+    console.log("red color");
+}else{
+    console.log("Color is unknown");
+}
+
+switch(color){
+    case "green":
+        console.log("green color");
+        break;
+    case "yellow":
+        console.log("yellow color");
+        break;
+    default:
+        console.log("colorless");
+        break;
+}*/
+
+
+/**
+ * Ternary operator example
+ */
+/*let i = 10;
+let j;
+
+j = i < 100 ? i : 0;
+console.log(j);
+
+i >=10 && j
+? console.log("true")
+: console.log("false");
+
+console.log(i);
+console.log(j);*/
+
