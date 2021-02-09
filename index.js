@@ -1,30 +1,44 @@
-//example 1
-//global execution context
-/**console.log("This is global execution context");
-const a = 10;
-console.log(a);
-
-function myFunction(a,b){
-    console.log("This is function execution context");
-    return a+b;
+//eXAMPLE 1
+// call method
+/**const myObject = {
+    a:10,
+    b: null
+};
+function myFunction(){
+    console.log(this);
 }
-console.log(myFunction(5,10));
-console.log(myFunction(5,"HI"));
+myFunction();
+myFunction(myObject);
+myFunction.call(myObject); //this is myObject
+*/
 
-console.log(myFunction(3,5));
+//EXAMPLE 2
+/*console.log(this);  //window
+console.log(this === window);   //true
+this.console.log("Method of this");
+
+
+//Example 3 -- 'this inside a function'
+//in strict mode
+"use strict";
+function myFunction(){
+    console.log(this);
+}
+
+myFunction();
+
+window.myFunction();
 */
 
 
-// example 2 - execution context stack
-console.log("Global contsxt -- root level in the stack");
-
-function firstLevel(){
-    console.log("Function context - second level in the stack");
-
-    function secondLevel(){
-        console.log("Function context - third level in the stack");
+//example 4 -- this in side of the methods of the object
+/*const myObject = {
+    name: "Alice",
+    age: 20,
+    greeting: function(){
+        console.log(this);
+        console.log("Name of the person is "+this.name+ " and the age is "+this.age);  //this is equal to {name: "Alice", age:20, greeting:..}
     }
-
-    secondLevel();
-}
-firstLevel();
+};
+myObject.greeting();
+*/
