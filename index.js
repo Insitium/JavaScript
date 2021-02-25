@@ -1,88 +1,68 @@
-/**
- * call - custom this
- */
-/*const myObject = {
-    a: 10,
-    b: null
-};
-function myFunction(){
-    console.log(this);
+//pass by value
+/*function myFunction(parameterA){
+    parameterA = 20;
+    return parameterA;
+}
+const a = 10;
+myFunction(12);
+*/
+//pass by reference
+
+/*const myArray = [1,2,3];
+console.log(myArray);
+function myFunction(arr){
+    console.log(arr === myArray);
+    arr.push(4);
+    console.log(arr);
+    return arr; 
 }
 
-myFunction();
-
-myFunction.call(myObject);*/
-
-//Example 2
-/*const myObject = {
-    a: 10,
-    b: null
-};
-function myFunction(a,b){
-    console.log(a+b);
-    console.log(this);
+myFunction(myArray);
+console.log(myArray);*/
+// challenge
+/*function addCustomGlobalMethod(globalObject){
+    globalObject.customMethod = function(){
+        console.log("greeitngs from thew custom method") 
+    };
 }
 
-myFunction();
+addCustomGlobalMethod(this);
+console.log(this == window); true
 
-myFunction.call(myObject, 10,3);*/
-
-//Exapmle 3 - Call method of the object with other object as "this"
-/*const person1 = {
-    city: "ny",
-    name: "bob",
-    info: function(){
-        console.log(this.name+" lives in "+this.city);
-    }
-};
-
-const person2 = {
-    city: "Paris",
-    name: "Alice"
-};
-person1.info(); //bob lives in ny
-
-person1.info.call(person2); //Alice lives in Paris
+console.log(typeof window)
+this.customMethod();    // greeting from the custom method
+customMethod();     //GREETING FROM THE CUSTOM method
 */
 
-/**
- * Example 4 -Apply method an custon "this" arguments
- */
-/*const myObject = {
-    a: 10,
-    b: null
-};
-function myFunction(a,b,c){
-    let sum = a+b+c;
-    //console.log(this);
-    for (let key in this){
-        if(typeof this[key] == "number"){
-            sum+= this[key];
-        }
-    }
-    console.log(sum);
-}
 
-myFunction.apply(myObject,[10, 3, 5]);
-*/  
-/**
- * Example 5 "Bind"
- */
-const myObject = {
-    a: 10,
-    b: null
-};
-function myFunction(a,b){
-    console.log(a+b);
-    console.log(this);
-}
+//IIFE -Immediately invoked functionm expression
+//option 1
+/*(function(globalObject){
+    globalObject.customMethod = function(){
+        console.log("Greeting from the custom method");
+    };
+})(this);
+*/
+
+//option2
+/*(function(){
+    this.customMethod = function(){
+        console.log("Greetings from the custom method");
+    };
+})();
+*/
+
+//option3
+/*(() =>{
+    this.customMethod = function(){
+        console.log("Greetings from the custom method");
+    };
+})();
+*/
 
 
-const customFunction = myFunction.bind(myObject, 10,3);//reset "this" and both arguments
-customFunction();
 
-const customFunction2 = myFunction.bind(myObject);
-customFunction2(20,6);
-const customFunction3 = myFunction.bind(myObject,10);
-customFunction3(30);// we passed the remaining argument
+console.log(this === window);   //true
+console.log(typeof window); // object
 
+this.customMethod();    // greeting from the custom method
