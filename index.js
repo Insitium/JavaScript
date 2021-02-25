@@ -48,7 +48,7 @@ person1.info.call(person2); //Alice lives in Paris
 /**
  * Example 4 -Apply method an custon "this" arguments
  */
-const myObject = {
+/*const myObject = {
     a: 10,
     b: null
 };
@@ -64,3 +64,25 @@ function myFunction(a,b,c){
 }
 
 myFunction.apply(myObject,[10, 3, 5]);
+*/  
+/**
+ * Example 5 "Bind"
+ */
+const myObject = {
+    a: 10,
+    b: null
+};
+function myFunction(a,b){
+    console.log(a+b);
+    console.log(this);
+}
+
+
+const customFunction = myFunction.bind(myObject, 10,3);//reset "this" and both arguments
+customFunction();
+
+const customFunction2 = myFunction.bind(myObject);
+customFunction2(20,6);
+const customFunction3 = myFunction.bind(myObject,10);
+customFunction3(30);// we passed the remaining argument
+
